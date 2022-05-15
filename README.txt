@@ -1,3 +1,3 @@
-.Net core ile e ticaret sitesi kodladım. İçerisinde kullanıcı kayıt olma işlemi ( google, facebook ve site için kayıt olma formu tercihe bağlı), admin ve normal kullanıcı hesapları kullandım. E-ticaret sitesi içerisinde kullanıcı bilgileri, rol bilgileri, ürünler, kategoriler veritabanında tutulmaktadır.
+I coded an e-commerce site with .net core. I used the user registration process (google, facebook and the registration form for the site optional), admin and normal user accounts in it. In the e-commerce site, user information, role information, products, categories are kept in the database.
 
-Aynı zamanda sanal pos entegrasyonu da mevcuttur. Bunun içinde Iyzipay kullandım. 
+Virtual pos integration is also available. I used Iyzipay for this.
