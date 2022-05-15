@@ -1,4 +1,6 @@
-﻿@using Microsoft.AspNetCore.Http
+﻿
+@using ECommerceSite.Models
+@using Microsoft.AspNetCore.Http
 @inject IHttpContextAccessor HttpContextAccessor
 <!DOCTYPE html>
 <html lang="en">
@@ -31,12 +33,26 @@
                             <li class="nav-item">
                                 <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Anasayfa</a>
                             </li>
+                           
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Admin Paneli
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <li><a class="dropdown-item" asp-area="Admin" asp-controller="Category" asp-action="Index">Kategoriler</a></li>
+                                        <li><a class="dropdown-item" asp-area="Admin" asp-controller="Product" asp-action="Index">Ürünler</a></li>
+                                        <li><a class="dropdown-item" asp-area="Admin" asp-controller="User" asp-action="Index">Kullanıcılar</a></li>
+                                        <li><a class="dropdown-item" asp-area="Admin" asp-controller="Order" asp-action="Index">Siparişler</a></li>
+                                    </ul>
+                                </li>
+                           
 
                         </ul>
-                        <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-
-                            <partial name="_LoginPartial" />
-                        </div>
+                        <form class="form-inline" action="/Customer/Home/Search" method="post" style="margin-right:0.5rem">
+                            <input name="q" type="text" class="form-control mr-2" placeholder="Arama" />
+                            <button class="btn btn-outline-info mr-2" type="submit"><i class="bi bi-search"></i>Ara</button>
+                        </form>
+                        <partial name="_LoginPartial" />
                     </div>
                 </div>
             </nav>
@@ -45,10 +61,6 @@
     </header>
     <div class="container">
         <main role="main" class="pb-3">
-            <form class="form-inline" action="/Customer/Home/Search" method="post" style="margin-right:0.5rem">
-                <input name="q" type="text" class="form-control mr-2" placeholder="Arama" />
-                <button class="btn btn-outline-info mr-2" type="submit"><i class="bi bi-search"></i>Ara</button>
-            </form>
             @RenderBody()
         </main>
     </div>
