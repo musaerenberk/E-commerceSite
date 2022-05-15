@@ -447,3 +447,12 @@ C:\Users\meren\OneDrive\Belgeler\eCommerceSite\E-commerceSite\ECommerceSite\obj\
 C:\Users\meren\OneDrive\Belgeler\eCommerceSite\E-commerceSite\ECommerceSite\obj\Debug\net5.0\Razor\Areas\Admin\Views\Category\Details.cshtml.g.cs
 C:\Users\meren\OneDrive\Belgeler\eCommerceSite\E-commerceSite\ECommerceSite\obj\Debug\net5.0\Razor\Areas\Admin\Views\Category\Edit.cshtml.g.cs
 C:\Users\meren\OneDrive\Belgeler\eCommerceSite\E-commerceSite\ECommerceSite\obj\Debug\net5.0\Razor\Areas\Admin\Views\Category\Index.cshtml.g.cs
+C:\Users\meren\OneDrive\Belgeler\eCommerceSite\E-commerceSite\ECommerceSite\obj\Debug\net5.0\Razor\Areas\Admin\Views\Product\Create.cshtml.g.cs
+C:\Users\meren\OneDrive\Belgeler\eCommerceSite\E-commerceSite\ECommerceSite\obj\Debug\net5.0\Razor\Areas\Admin\Views\Product\Delete.cshtml.g.cs
+C:\Users\meren\OneDrive\Belgeler\eCommerceSite\E-commerceSite\ECommerceSite\obj\Debug\net5.0\Razor\Areas\Admin\Views\Product\Details.cshtml.g.cs
+C:\Users\meren\OneDrive\Belgeler\eCommerceSite\E-commerceSite\ECommerceSite\obj\Debug\net5.0\Razor\Areas\Admin\Views\Product\Edit.cshtml.g.cs
+C:\Users\meren\OneDrive\Belgeler\eCommerceSite\E-commerceSite\ECommerceSite\obj\Debug\net5.0\Razor\Areas\Admin\Views\Product\Index.cshtml.g.cs
+C:\Users\meren\OneDrive\Belgeler\eCommerceSite\E-commerceSite\ECommerceSite\obj\Debug\net5.0\Razor\Areas\Customer\Views\Home\CategoryDetails.cshtml.g.cs
+C:\Users\meren\OneDrive\Belgeler\eCommerceSite\E-commerceSite\ECommerceSite\obj\Debug\net5.0\Razor\Areas\Customer\Views\Home\Components\CategoryList\Default.cshtml.g.cs
+C:\Users\meren\OneDrive\Belgeler\eCommerceSite\E-commerceSite\ECommerceSite\obj\Debug\net5.0\Razor\Areas\Customer\Views\Home\Details.cshtml.g.cs
+C:\Users\meren\OneDrive\Belgeler\eCommerceSite\E-commerceSite\ECommerceSite\obj\Debug\net5.0\Razor\Areas\Customer\Views\Home\Search.cshtml.g.cs

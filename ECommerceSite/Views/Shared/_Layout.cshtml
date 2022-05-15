@@ -1,5 +1,5 @@
 ﻿
-@using ECommerceSite.Models
+@using ECommerceSite.Models 
 @using Microsoft.AspNetCore.Http
 @inject IHttpContextAccessor HttpContextAccessor
 <!DOCTYPE html>
@@ -7,11 +7,11 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - OrnekSite</title>
+    <title>@ViewData["Title"] - ECommerceSite</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
-
+    
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.4/css/jquery.dataTables.min.css">
 </head>
 <body>
@@ -33,7 +33,8 @@
                             <li class="nav-item">
                                 <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Anasayfa</a>
                             </li>
-                           
+                            @if (User.IsInRole(Diger.Role_Admin))
+                            {
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                         Admin Paneli
@@ -45,11 +46,37 @@
                                         <li><a class="dropdown-item" asp-area="Admin" asp-controller="Order" asp-action="Index">Siparişler</a></li>
                                     </ul>
                                 </li>
-                           
+                            }
+                            else if(User.Identity.IsAuthenticated)
+            {
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-area="Admin" asp-controller="Order" asp-action="Index">Siparişler</a>
+                        </li>
+            }
+                            @if(User.Identity.IsAuthenticated && HttpContextAccessor.HttpContext.Session.GetInt32(Diger.ssShoppingCart) != null)
+                            {
+                                <li style="color:white">
+                                    <a asp-area="Customer" asp-controller="Cart" asp-action="Index" class="nav-link text-white">
+                                        @{
+                                            var count = HttpContextAccessor.HttpContext.Session.GetInt32(Diger.ssShoppingCart);
+                                        }
+                                        <i class="bi bi-cart2"></i>(@count)
+                                    </a>
+                                </li>
+                            }
+                            else
+                            {
+                                <li style="color:white">
+                                    <a href="/Identity/Account/Login" class="nav-link text-white">
+                                       
+                                        <i class="bi bi-cart2"></i>(0)
+                                    </a>
+                                </li>
+                            }
 
                         </ul>
                         <form class="form-inline" action="/Customer/Home/Search" method="post" style="margin-right:0.5rem">
-                            <input name="q" type="text" class="form-control mr-2" placeholder="Arama" />
+                            <input  name="q" type="text" class="form-control mr-2" placeholder="Arama"/>
                             <button class="btn btn-outline-info mr-2" type="submit"><i class="bi bi-search"></i>Ara</button>
                         </form>
                         <partial name="_LoginPartial" />
@@ -67,7 +94,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2022 - OrnekSite - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2022 - ECommerceSite - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
