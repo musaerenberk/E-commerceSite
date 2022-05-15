@@ -50,7 +50,7 @@ namespace ECommerceSite.Areas.Admin.Controllers
 
         // POST: Admin/Category/Delete/5
         [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
+       [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(string id)
         {
             var user = await _context.ApplicationUsers.FindAsync(id);

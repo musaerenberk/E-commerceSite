@@ -16,7 +16,7 @@ namespace ECommerceSite.Email
             var client = new SendGridClient(Options.SendGridKey);
             var mesaj = new SendGridMessage()
             {
-                From = new EmailAddress("berk.karadeli@gmail.com", "musaerenberk"),
+                From = new EmailAddress("berk.karadeli@gmail.com", "Berk"),
                 Subject = subject,
                 PlainTextContent = htmlMessage,
                 HtmlContent = htmlMessage

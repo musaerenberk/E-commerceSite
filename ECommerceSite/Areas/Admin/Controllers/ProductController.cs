@@ -175,7 +175,7 @@ namespace ECommerceSite.Areas.Admin.Controllers
 
         // POST: Admin/Product/Delete/5
         [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
+       [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var product = await _context.Products.FindAsync(id);

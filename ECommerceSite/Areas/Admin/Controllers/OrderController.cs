@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 namespace ECommerceSite.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    [Authorize]
+   [Authorize]
     public class OrderController : Controller
     {
         private readonly ApplicationDbContext _db;
@@ -23,7 +23,7 @@ namespace ECommerceSite.Areas.Admin.Controllers
             _db = db;
         }
         [HttpPost]
-        [Authorize(Roles =Diger.Role_Admin)]
+       [Authorize(Roles =Diger.Role_Admin)]
         public IActionResult Onaylandi()
         {
             OrderHeader orderHeader = _db.OrderHeaders.FirstOrDefault(i => i.Id == OrderVM.OrderHeader.Id);
@@ -32,6 +32,7 @@ namespace ECommerceSite.Areas.Admin.Controllers
             return RedirectToAction("Index");
         }
         [HttpPost]
+    
         [Authorize(Roles = Diger.Role_Admin)]
         public IActionResult KargoyaVer()
         {
